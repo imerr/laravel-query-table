@@ -52,9 +52,12 @@ $customers = (new QueryTable($request, Customer::query()))
 // pass $customers to your view and simply output the table:
 // {!! $customers !!}
 ```
-Turns into:
-![rendered table](https://share.dl.je/2023/06/2023-06-29_05-31-55_R80cj1SLUv.png)
 
-Filter demo:
-![video of filters being used](https://share.dl.je/2023/06/2023-06-29_05-37-46_60UAp6JTKL.mp4)
+Turns into: ![preview of rendered table](https://github.com/imerr/laravel-query-table/assets/1426904/4ae52043-d2bf-4882-a995-ce84af3c72e0)
+
+Filter demo: <video width="320" height="240" src="https://github.com/imerr/laravel-query-table/assets/1426904/d675ada5-0595-4d5f-92f9-968225aa6459"></video>
+
+
+
+
 
