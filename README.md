@@ -1,5 +1,7 @@
 # QueryTable
 A laravel plugin for displaying query results as a table with built-in filtering/sorting/pagination.
+Views use bootstrap and font-awesome, but can be published and modified via `php artisan vendor:publish --provider="imer\QueryTable\QueryTableProvider"` command
+While this package is still in early stages the api might still change for better usability
 
 Example:
 ```php
