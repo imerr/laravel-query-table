@@ -55,7 +55,11 @@ $customers = (new QueryTable($request, Customer::query()))
 
 Turns into: ![preview of rendered table](https://github.com/imerr/laravel-query-table/assets/1426904/4ae52043-d2bf-4882-a995-ce84af3c72e0)
 
-Filter demo: <video width="320" height="240" src="https://github.com/imerr/laravel-query-table/assets/1426904/d675ada5-0595-4d5f-92f9-968225aa6459"></video>
+Filter demo: https://github.com/imerr/laravel-query-table/assets/1426904/000197cf-09ff-41bc-acf6-eb01bd1a98e8
+
+
+
+
 
 
 
