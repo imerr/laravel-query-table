@@ -1,0 +1,33 @@
+{
+    "name": "imer/laravel-query-table",
+    "type": "library",
+    "description": "Laravel plugin for displaying query results as a table with built-in filtering/sorting/pagination",
+    "keywords": ["log","logging"],
+    "homepage": "https://github.com/imerr/laravel-query-table",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin Rolf",
+            "email": "imer@imer.cc",
+            "homepage": "https://imer.cc",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0",
+        "illuminate/support": "^6|^7|^8|^9|^10",
+        "illuminate/http": "^6|^7|^8|^9|^10"
+    },
+    "autoload": {
+        "psr-4": {
+            "imer\\QueryTable\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "imer\\QueryTable\\QueryTableProvider"
+            ]
+        }
+    }
+}
