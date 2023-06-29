@@ -54,3 +54,7 @@ $customers = (new QueryTable($request, Customer::query()))
 ```
 Turns into:
 ![rendered table](https://share.dl.je/2023/06/2023-06-29_05-31-55_R80cj1SLUv.png)
+
+Filter demo:
+![video of filters being used](https://share.dl.je/2023/06/2023-06-29_05-37-46_60UAp6JTKL.mp4)
+
