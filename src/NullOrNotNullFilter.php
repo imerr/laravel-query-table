@@ -12,8 +12,16 @@ class NullOrNotNullFilter extends DropdownFilter {
         ]);
     }
 
+    public function defaultFilterNull() {
+        return $this->default(0);
+    }
+    public function defaultFilterNotNull() {
+        return $this->default(1);
+    }
+
+
     public function apply(QueryTable $table, Field $field, Builder $query) {
-        $filter = request()->query($this->getQueryName($table, $field));
+        $filter = request()->query($this->getQueryName($table, $field), $this->defaultFilter);
         if ($filter !== null && isset($this->values[$filter])) {
             if ($filter) {
                 $query->whereNotNull($field->key);
