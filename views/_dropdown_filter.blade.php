@@ -8,7 +8,7 @@
         <option> - </option>
         @foreach($values as $key => $value)
             <option value="{{$key}}"
-                @if((string)$key === request()->query($fieldName, $defaultFilter))
+                @if((string)$key === (string)request()->query($fieldName, $defaultFilter))
                         selected="selected"
                 @endif
             >{{$value}}</option>
