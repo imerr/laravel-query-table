@@ -24,9 +24,9 @@ class NullOrNotNullFilter extends DropdownFilter {
         $filter = request()->query($this->getQueryName($table, $field), $this->defaultFilter);
         if ($filter !== null && isset($this->values[$filter])) {
             if ($filter) {
-                $query->whereNotNull($field->key);
+                $query->whereNotNull($field->whereColumnName);
             } else {
-                $query->whereNull($field->key);
+                $query->whereNull($field->whereColumnName);
             }
         }
     }

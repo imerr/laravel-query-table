@@ -44,7 +44,7 @@ class TextFilter implements Filter {
     public function apply(QueryTable $table, Field $field, Builder $query) {
         $filter = request()->query($this->getQueryName($table, $field));
         if ($filter !== null && $filter !== "") {
-            $query->where($field->key, $this->operand, $this->prefix.$filter.$this->postfix);
+            $query->where($field->whereColumnName, $this->operand, $this->prefix.$filter.$this->postfix);
         }
     }
 }

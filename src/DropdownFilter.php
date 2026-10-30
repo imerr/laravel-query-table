@@ -36,7 +36,7 @@ class DropdownFilter implements Filter {
     public function apply(QueryTable $table, Field $field, Builder $query) {
         $filter = request()->query($this->getQueryName($table, $field), $this->defaultFilter);
         if ($filter !== null && isset($this->values[$filter])) {
-            $query->where($field->key, "=", $filter);
+            $query->where($field->whereColumnName, "=", $filter);
         }
     }
 }

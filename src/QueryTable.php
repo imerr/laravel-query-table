@@ -110,7 +110,7 @@ class QueryTable {
         $sortField = $this->request->input($this->fieldName(self::FieldSort), $this->defaultSort);
         foreach ($this->fields as $field) {
             if ($field->key && $sortField == $field->key) {
-                $this->query->orderBy($field->key, $sortDirection);
+                $this->query->orderBy($field->whereColumnName, $sortDirection);
             }
         }
         $this->query->where(function ($q) {

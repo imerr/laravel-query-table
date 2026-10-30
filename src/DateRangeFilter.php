@@ -32,8 +32,8 @@ class DateRangeFilter implements Filter {
         $filterFrom = request()->query($this->getQueryNameFrom($table, $field));
         $filterTo = request()->query($this->getQueryNameTo($table, $field));
         if ($filterFrom && $filterTo) {
-            $query->where($field->key, ">=", $filterFrom);
-            $query->where($field->key, "<", $filterTo);
+            $query->where($field->whereColumnName, ">=", $filterFrom);
+            $query->where($field->whereColumnName, "<", $filterTo);
         }
     }
 }

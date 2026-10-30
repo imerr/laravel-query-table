@@ -6,6 +6,7 @@ use Illuminate\Support\Arr;
 
 class Field {
     public string $key = "";
+    public string $whereColumnName;
     private ?string $translationKey = null;
     /**
      * @var callable($
@@ -15,8 +16,9 @@ class Field {
     public ?Filter $filter = null;
     public $nameText = null;
 
-    public function __construct($key) {
+    public function __construct($key, $whereColumnName = null) {
         $this->key = $key;
+        $this->whereColumnName = $whereColumnName ?? $key;
     }
 
     /**
